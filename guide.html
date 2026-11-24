@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101116">
+    <meta name="description" content="User guide for setting up CS Moments, generating vertical clips, and reviewing TikTok posts.">
+    <title>User Guide — CS Moments</title>
+    <link rel="icon" href="/assets/app-icon.png" type="image/png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="CS Moments home"><img src="/assets/app-icon.png" width="42" height="42" alt=""><span>CS <span class="brand-accent">MOMENTS</span></span></a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a aria-current="page" href="/guide.html">Guide</a><a href="/features.html">Features</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+      <a class="header-link" href="mailto:danil.romoshenko@gmail.com">Contact <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main" class="page-width document-page">
+      <p class="eyebrow">DOCUMENTATION / GETTING STARTED</p>
+      <h1>Using CS Moments.</h1>
+      <p class="document-lede">The desktop app processes video on your computer. This guide describes the main workflow and the checks to make before exporting or posting.</p>
+
+      <section class="document-section">
+        <h2>Before you start</h2>
+        <ul class="check-list">
+          <li>Use a Windows computer with the project installed and its Python environment set up.</li>
+          <li>Install FFmpeg and FFprobe and make sure they are available on your system PATH.</li>
+          <li>Some AI-assisted features need an API key for the provider you choose. Read that provider's data and billing terms before enabling it.</li>
+          <li>TikTok posting is optional and requires your own TikTok for Developers app, configured credentials, and account authorization.</li>
+        </ul>
+        <p class="muted-copy">CS Moments is currently provided as a desktop project; a public installer or hosted video-editing service is not available from this website.</p>
+      </section>
+
+      <section class="document-section">
+        <h2>Generate a clip</h2>
+        <ol class="guide-steps">
+          <li><span>01</span><div><h3>Start the desktop app</h3><p>In the project folder, run <code>shorts-web.bat</code>. Open <code>http://127.0.0.1:8000</code> in your browser while the local server is running.</p></div></li>
+          <li><span>02</span><div><h3>Select a source recording</h3><p>Use <strong>Upload video(s)</strong>, choose the generation mode and settings, then start processing.</p></div></li>
+          <li><span>03</span><div><h3>Review the output</h3><p>Inspect generated clips, titles, subtitles, framing, and audio. Edit settings or regenerate if needed; automated selection is not guaranteed to be accurate.</p></div></li>
+          <li><span>04</span><div><h3>Export or choose TikTok</h3><p>Keep the clip locally, or use the TikTok action if the account is connected and the required TikTok permissions are available.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="document-section">
+        <h2>Set up TikTok posting</h2>
+        <ol class="numbered-list">
+          <li>Configure Login Kit and Content Posting API in TikTok for Developers. The app uses the desktop redirect URI <code>http://localhost:8000/api/tiktok/callback</code>.</li>
+          <li>Set the client key and client secret from the same Developer Portal environment used for the test (Sandbox or Production). The local launcher prompts for credentials when they are not set in the environment.</li>
+          <li>Connect the TikTok account in the app. In the posting dialog, review the creator, caption, privacy, and interaction settings.</li>
+          <li>Confirm only when you intend to send the selected video to TikTok. TikTok's unaudited-client restrictions and review status determine which privacy options are allowed.</li>
+        </ol>
+        <p class="notice-panel"><strong>Keep credentials private.</strong> Never put a client secret in a public website, source repository, screenshot, or support message.</p>
+      </section>
+
+      <div class="document-links"><a class="button button-primary" href="/features.html">Explore product features <span aria-hidden="true">→</span></a><a class="button button-secondary" href="/support.html">Troubleshooting and support</a></div>
+    </main>
+    <footer class="site-footer">
+      <div class="page-width footer-main"><a class="brand footer-brand" href="/" aria-label="CS Moments home"><img src="/assets/app-icon.png" width="36" height="36" alt=""><span>CS <span class="brand-accent">MOMENTS</span></span></a><p>Keep the play. Share the moment.</p><nav aria-label="Site navigation"><a href="/features.html">Features</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms of service</a></nav></div>
+      <div class="page-width footer-legal"><span>© 2026 CS Moments</span><span>Independent project. Not affiliated with Valve, Counter-Strike, or TikTok.</span></div>
+    </footer>
+  </body>
+</html>

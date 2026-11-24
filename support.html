@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101116">
+    <meta name="description" content="Help and contact information for CS Moments users.">
+    <title>Help and Support — CS Moments</title>
+    <link rel="icon" href="/assets/app-icon.png" type="image/png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="CS Moments home"><img src="/assets/app-icon.png" width="42" height="42" alt=""><span>CS <span class="brand-accent">MOMENTS</span></span></a>
+      <nav class="main-nav" aria-label="Main navigation"><a href="/">Home</a><a href="/guide.html">Guide</a><a href="/features.html">Features</a><a aria-current="page" href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav>
+      <a class="header-link" href="mailto:danil.romoshenko@gmail.com">Email support <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="main" class="page-width document-page">
+      <p class="eyebrow">HELP / SUPPORT</p>
+      <h1>We're here to <span class="accent-text">help.</span></h1>
+      <p class="document-lede">CS Moments is a locally run desktop application. For setup questions or issues with a feature, contact the project maintainer by email.</p>
+
+      <section class="support-panel">
+        <div><p class="eyebrow">CONTACT</p><h2>Tell us what happened.</h2><p>Include your Windows version, the app mode you used, and the exact error text. Do not send API keys, TikTok tokens, or private source videos.</p></div>
+        <a class="button button-primary" href="mailto:danil.romoshenko@gmail.com?subject=CS%20Moments%20support">Email support <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="document-section">
+        <h2>Common checks</h2>
+        <div class="faq-list">
+          <details><summary>The app does not open or the page is unavailable</summary><p>Confirm that <code>shorts-web.bat</code> is still running in its console window, then open <code>http://127.0.0.1:8000</code>. Check the console for an error and verify the project environment and required packages are installed.</p></details>
+          <details><summary>Video processing fails</summary><p>Check that FFmpeg and FFprobe are installed and on PATH, that the input file can be read, and that enough disk space is available. If you contact support, share the error text with file names and private details removed.</p></details>
+          <details><summary>TikTok connection or posting fails</summary><p>Confirm the Developer Portal credentials and redirect URI match the environment, that the account is authorized, and that the required product and scope are available. TikTok can restrict unaudited apps to private posting. Do not share credentials or authorization tokens with support.</p></details>
+          <details><summary>Where are project files stored?</summary><p>Jobs and generated clips are stored on your computer in the application's configured storage folder. See the <a href="/privacy.html">Privacy Policy</a> for data handling details.</p></details>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="page-width footer-main"><a class="brand footer-brand" href="/" aria-label="CS Moments home"><img src="/assets/app-icon.png" width="36" height="36" alt=""><span>CS <span class="brand-accent">MOMENTS</span></span></a><p>Keep the play. Share the moment.</p><nav aria-label="Site navigation"><a href="/guide.html">Guide</a><a href="/features.html">Features</a><a href="/privacy.html">Privacy policy</a><a href="/terms.html">Terms of service</a></nav></div>
+      <div class="page-width footer-legal"><span>© 2026 CS Moments</span><span>Independent project. Not affiliated with Valve, Counter-Strike, or TikTok.</span></div>
+    </footer>
+  </body>
+</html>
